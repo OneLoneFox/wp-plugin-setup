@@ -79,8 +79,7 @@ fn main() -> std::io::Result<()> {
         // iterate over the template placeholders to replace
         for placeholder in &template.placeholders {
             // replace for every placeholder
-            println!("now replacing {} in {}", placeholder, template.template);
-            parsed_template = replace_template_placeholders(&template.template, &placeholder, &plugin_metadata[placeholder]);
+            parsed_template = replace_template_placeholders(&parsed_template, &placeholder, &plugin_metadata[placeholder]);
         }
         // write parsed contents to file
         plugin_file.write_all(parsed_template.as_bytes())?;
