@@ -1,0 +1,19 @@
+{
+    "name": "delindel/aa",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "classmap": ["src/", ""],
+        "psr-4": {
+            "CondusivMarketingSync\\": ["src/"]
+        }
+    },
+    "authors": [
+        {
+            "name": "lonefox",
+            "email": "lonefox.automation@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
